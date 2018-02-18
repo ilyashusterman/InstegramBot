@@ -7,18 +7,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LikeMachine {
-    private final ChromeDriver driver;
+//    private final ChromeDriver driver;
     public boolean isConnected = false;
     private String status;
 
     LikeMachine(){
-        System.setProperty("webdriver.chrome.driver", "/opt/google/chrome/chrome");
-        this.driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
+//        this.driver = new ChromeDriver();
     }
 
     public LikeMachine getSession(String username, String password) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
-        driver.get("http://www.google.com/xhtml");
+        driver.get("https://google.com");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("ChromeDriver");
         searchBox.submit();
