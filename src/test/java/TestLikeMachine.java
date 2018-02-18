@@ -11,8 +11,8 @@ public class TestLikeMachine {
     }
 
     @Test
-    public void testConnectionLike(){
+    public void testConnectionLike() throws Exception{
         LikeMachine connected = likeMachine.getSession("nikita1@gmail.com", "password");
-        assert connected.isConnected() == true;
+        assert connected.isConnected == true;
     }
 }
